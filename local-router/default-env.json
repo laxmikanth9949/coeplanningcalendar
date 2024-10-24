@@ -1,0 +1,66 @@
+{
+    "destinations": [
+        {
+            "name": "local",
+            "url": "http://localhost:8080",
+	    "forwardAuthToken": true
+        },
+        {
+            "name": "int_ic",
+            "url": "https://int_ic.dest/",
+            "proxyHost": "127.0.0.1",
+            "proxyPort": "8887"
+        }
+    ],
+    "VCAP_SERVICES": {
+        "xsuaa": [
+            {
+                "name": "coeplanningcalendar-xsuaa-srv",
+                "label": "xsuaa",
+                "tags": [
+                    "xsuaa"
+                ],
+                "credentials": {
+                    "tenantmode": "dedicated",
+                    "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+                    "subaccountid": "36b3db9d-3e64-42b5-88fb-5b7b39ec2833",
+                    "credential-type": "instance-secret",
+                    "clientid": "sb-coeplanningcalendar!t224065",
+                    "xsappname": "coeplanningcalendar!t224065",
+                    "clientsecret": "9WH+Qv5aik4q7v5lRsKmo7oNokw=",
+                    "url": "https://sapit-customersupport-dev-mallard.authentication.eu10.hana.ondemand.com",
+                    "uaadomain": "authentication.eu10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3IfPe+Pr8HwdoZQ0f/H\n3cD7knv1HUcHIhoVxTajIdVssnfIDbVroD8iU8SN936VsXldPQZ7egq+nz0VRl7Q\n5/ZlYpU5tekpEfT0c1dwxPXi6e2VW4wTUNZLLLytgVNmy4xtgSMDx36wYDS0wE1q\nb7tTbGNMih3b/n7iVkK6T7c0TTVaIhp8d7ppyO9qJVkrG4Aou4gLUkRTewYuHskf\nrq8vyI1vNE7R0N4DG+ak5d5JuDGmXn2b5AtKKnV78MvEBJfDO2OWWjgnXLF3rnv0\ng0cfXV1UL4f8hBXNqL3XkFLrcMU4RyeAIgQ1qOCXcyN37zsEIoSHgfj8JhY3Gfnp\nbwIDAQAB\n-----END PUBLIC KEY-----",
+                    "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+                    "identityzone": "sapit-customersupport-dev-mallard",
+                    "identityzoneid": "36b3db9d-3e64-42b5-88fb-5b7b39ec2833",
+                    "tenantid": "36b3db9d-3e64-42b5-88fb-5b7b39ec2833",
+                    "zoneid": "36b3db9d-3e64-42b5-88fb-5b7b39ec2833"
+                  }
+            }
+        ],
+        "destination": [
+            {
+                "name": "coeplanningcalendar-destination-service",
+                "label": "destination",
+                "tags": [
+                    "destination"
+                ],
+                "credentials": {
+                    "tenantmode": "dedicated",
+                    "clientid": "sb-clone6368bcb452a4452c92aef05ea5e9e4c5!b224065|destination-xsappname!b404",
+                    "credential-type": "binding-secret",
+                    "xsappname": "clone6368bcb452a4452c92aef05ea5e9e4c5!b224065|destination-xsappname!b404",
+                    "clientsecret": "6d55ba05-30d2-4397-aa50-e74537e14756$_GGzhJpQwYXhRX_zJDhfdOqumiusj8BWfxPDi9YqEy4=",
+                    "uri": "https://destination-configuration.cfapps.eu10.hana.ondemand.com",
+                    "url": "https://sapit-customersupport-dev-mallard.authentication.eu10.hana.ondemand.com",
+                    "uaadomain": "authentication.eu10.hana.ondemand.com",
+                    "instanceid": "6368bcb4-52a4-452c-92ae-f05ea5e9e4c5",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3IfPe+Pr8HwdoZQ0f/H\n3cD7knv1HUcHIhoVxTajIdVssnfIDbVroD8iU8SN936VsXldPQZ7egq+nz0VRl7Q\n5/ZlYpU5tekpEfT0c1dwxPXi6e2VW4wTUNZLLLytgVNmy4xtgSMDx36wYDS0wE1q\nb7tTbGNMih3b/n7iVkK6T7c0TTVaIhp8d7ppyO9qJVkrG4Aou4gLUkRTewYuHskf\nrq8vyI1vNE7R0N4DG+ak5d5JuDGmXn2b5AtKKnV78MvEBJfDO2OWWjgnXLF3rnv0\ng0cfXV1UL4f8hBXNqL3XkFLrcMU4RyeAIgQ1qOCXcyN37zsEIoSHgfj8JhY3Gfnp\nbwIDAQAB\n-----END PUBLIC KEY-----",
+                    "identityzone": "sapit-customersupport-dev-mallard",
+                    "tenantid": "36b3db9d-3e64-42b5-88fb-5b7b39ec2833"
+                  }
+            }
+        ]
+    }
+}
