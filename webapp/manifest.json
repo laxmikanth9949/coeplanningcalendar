@@ -1,0 +1,207 @@
+{
+  "_version": "1.4.0",
+  "sap.cloud": {
+    "service": "coeplanningcalendar",
+    "public": true
+  },
+  "sap.app": {
+    "_version": "1.3.0",
+		"id": "sap.coe.planning.calendar",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.3.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		},
+    "dataSources": {
+      "utils": {
+        "uri": "./model/utilsModel.json",
+        "type": "JSON"
+      },
+      "mainService": {
+        "uri": "sap/opu/odata/sap/ZS_RPA_GATEWAY_SRV/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "intent1": {
+          "signature": {
+            "parameters": {
+              "BegDate": {
+                "required": true
+              },
+              "EndDate": {
+                "required": true
+              },
+              "OrgId": {
+                "required": false
+              },
+              "DemandServiceTeam": {
+                "required": false
+              },
+              "DemandQualification": {
+                "required": false
+              }
+            },
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "planningcalendar",
+          "action": "display",
+          "title": "Resource Demand List",
+          "subTitle": ""
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_belize",
+      "sap_bluecrystal"
+    ]
+  },
+  "sap.ui5": {
+		"services": {
+			"ShellUIService": {
+				"factoryName": "sap.ushell.ui5service.ShellUIService"
+			}
+		},
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "sap.coe.planning.calendar.view.App",
+			"type": "XML"
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/fullScreenStyles.css"
+				}
+			]
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.coe.planning.calendar.i18n.i18n"
+				},
+				"preload": false,
+				"async": true,
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"settings": {
+					"useBatch": false,
+					"defaultUpdateMethod": "PUT",
+					"defaultOperationMode": "Auto",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "None"
+				},
+				"dataSource": "mainService",
+				"preload": true
+			},
+			"UtilsModel": {
+				"dataSource": "utils",
+				"preload": true
+			}
+		},
+		"routing": {
+			"config": {
+				"viewType": "XML",
+				"viewPath": "sap.coe.planning.calendar.view",
+				"targetAggregation": "pages",
+				"clearTarget": false
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "Worklist",
+					"view": "Worklist",
+					"viewPath": "sap.coe.planning.calendar.view",
+					"targetControl": "idAppControl"
+				},
+				{
+					"pattern": "worklist/{SoNum}",
+					"name": "WorklistSearchSO",
+					"view": "Worklist",
+					"viewPath": "sap.coe.planning.calendar.view",
+					"targetControl": "idAppControl"
+				},
+				{
+					"pattern": "PlanningCalendar",
+					"name": "planningCalendar",
+					"view": "PlanningCalendar",
+					"viewPath": "sap.coe.planning.calendar.view",
+					"targetControl": "idAppControl",
+					"target": [
+						"master",
+						"object"
+					]
+				}
+			],
+			"targets": {
+				"master": {
+					"viewName": "PlanningCalendar",
+					"viewId": "master",
+					"viewLevel": 1,
+					"controlId": "idSplitAppControl",
+					"controlAggregation": "masterPages"
+				},
+				"object": {
+					"viewName": "Detail",
+					"viewId": "detail",
+					"viewLevel": 2,
+					"controlId": "idSplitAppControl",
+					"controlAggregation": "detailPages"
+				}
+			},
+			"resources": {
+				"css": [
+					{
+						"uri": "css/style.css"
+					}
+				]
+			}
+		}
+	},
+  "sap.platform.hcp": {
+    "uri": "webapp",
+    "_version": "1.1.0"
+  }
+}

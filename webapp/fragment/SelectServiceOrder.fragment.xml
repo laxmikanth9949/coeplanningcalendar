@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:d="sap.ui.comp.valuehelpdialog" xmlns:PCComponents="sap.coe.planning.calendar.component">
+    <d:ValueHelpDialog ok="onOkPress" cancel="onCancelPress" afterOpen="onAfterOpen" title="{i18n>FRAGMENT_SELECT_SERVICE_ORDER_TITLE}" id="idForValueHelpDialog">
+        <PCComponents:ServiceDemandFilterBar id="ServiceDemandFilterBar" search="onSearch"></PCComponents:ServiceDemandFilterBar>
+    </d:ValueHelpDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,41 @@
+{
+    "d": {
+        "results": [{
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/OrgUnitSet(EmpId='I327678',OrgId='30015950')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/OrgUnitSet(EmpId='I327678',OrgId='30015950')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.OrgUnit"
+            },
+            "EmpId": "I327678",
+            "OrgId": "30015950",
+            "HigherUnt": "00000000",
+            "CurUnit": "00000000",
+            "MangeLevel": "2",
+            "OrgText": "COE Ireland HANA",
+            "CurUnitText": "",
+            "SubOrgUnitSet": {
+                "results": [
+
+                ]
+            }
+        },{
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/OrgUnitSet(EmpId='',OrgId='')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/OrgUnitSet(EmpId='',OrgId='')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.OrgUnit"
+            },
+            "EmpId": "",
+            "OrgId": "",
+            "HigherUnt": "00000000",
+            "CurUnit": "00000000",
+            "MangeLevel": "2",
+            "OrgText": "COE Ireland HANA",
+            "CurUnitText": "",
+            "SubOrgUnitSet": {
+                "results": [
+
+                ]
+            }
+        }]
+    }
+}

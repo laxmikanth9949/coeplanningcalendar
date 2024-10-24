@@ -1,0 +1,142 @@
+<mvc:View xmlns="sap.m" xmlns:x="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+    controllerName="sap.coe.planning.calendar.controller.Detail" xmlns:core="sap.ui.core"
+    xmlns:reuselib="sap.coe.capacity.reuselib.controls.ResourcePlanningCalendar"
+    xmlns:reuseOrg="sap.coe.capacity.reuselib.controls.OrgUnitSelect" xmlns:reuseEmp="sap.coe.capacity.reuselib.controls.EmployeeSelect"
+    xmlns:reuseQual="sap.coe.capacity.reuselib.controls.QualificationSelect"
+    xmlns:reuseTeam="sap.coe.capacity.reuselib.controls.ServiceTeamSelect" xmlns:fb="sap.ui.comp.filterbar">
+    <semantic:DetailPage class="planningcalendar">
+        <x:ObjectPageLayout id="ObjectPageLayout" showAnchorBar="false" alwaysShowContentHeader="true">
+            <x:headerTitle>
+                <x:ObjectPageDynamicHeaderTitle id="pageTitle">
+                    <x:breadcrumbs>
+                        <Breadcrumbs currentLocationText="{MasterListModel>ItemDescription}">
+                            <Link id="OSDLinkID" visible="{= ${MasterListModel>DemandID} !== undefined &amp;&amp; ${MasterListModel>DemandID} !== null &amp;&amp; ${MasterListModel>DemandID} !== ''}" text="{parts:[{path:'MasterListModel>DemandID'}, {path:'MasterListModel>ItemNo'}], formatter:'.formatterReuse.seperateWithSlash'}" press="onItemDescriptionLinkPress" />
+                        </Breadcrumbs>
+                    </x:breadcrumbs>
+                    <x:expandedHeading>
+                        <VBox>
+                            <Title text="{parts:[{path:'MasterListModel>Customer'}, {path:'MasterListModel>ERPCustomerNo'}], formatter:'.formatter.seperateWithSlash'}" wrapping="true" />
+                        </VBox>
+                    </x:expandedHeading>
+                    <x:snappedHeading>
+                        <VBox>
+                            <Title text="{parts:[{path:'MasterListModel>Customer'}, {path:'MasterListModel>ERPCustomerNo'}], formatter:'.formatter.seperateWithSlash'}" wrapping="true" />
+                        </VBox>
+                    </x:snappedHeading>
+                </x:ObjectPageDynamicHeaderTitle>
+            </x:headerTitle>
+            <x:headerContent id="headerContent">
+                <!-- Id's are needed to be used for column customisation options -->
+                <HBox>
+                    <VBox class="sapUiSmallMarginEnd">
+                        <ObjectStatus id="ratingCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_RATING}"
+                            text="{path: 'MasterListModel>Rating', formatter:'.formatter.formatRating'}"
+                            state="{path: 'MasterListModel>Rating', formatter:'.formatter.formatRatingStatus'}"/>
+                        <ObjectStatus id="headerDescCol" title="{i18n>PLANNING_CALENDAR_DETAIL_DESCRIPTION}" text="{MasterListModel>HeaderDescription}"
+                            visible="{P13nTableModel>visible}"/>
+                        <ObjectStatus id="qualifiationDescriptionCol" title="{i18n>PLANNING_CALENDAR_DETAIL_QUALIFICATION}"
+                            text="{MasterListModel>FirstQualificationDescription}"/>
+                        <ObjectStatus id="serviceTeamCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_SERVICE_TEAM}" text="{MasterListModel>STName}"/>
+                    </VBox>
+                    <VBox class="sapUiSmallMarginEnd">
+                        <ObjectStatus id="cwCol" title="{i18n>PLANNING_CALENDAR_DETAIL_CALENDAR_WEEK}" text="{MasterListModel>CalenderWeek}"/>
+                        <ObjectStatus id="startDateCol" title="{i18n>PLANNING_CALENDAR_DETAIL_START_DATE_TIME}"
+                            text="{path:'MasterListModel>StartDate', type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'}}"/>
+                        <ObjectStatus id="endDateCol" title="{i18n>PLANNING_CALENDAR_DETAIL_END_DATE_TIME}"
+                            text="{path:'MasterListModel>EndDate', type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'}}"/>
+                        <ObjectStatus id="scopeDate" title="{i18n>PLANNING_CALENDAR_DETAIL_SCOPE_DATE}"
+                            text="{path:'MasterListModel>ScopeDate', type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'}}"/>
+                    </VBox>
+                    <VBox class="sapUiSmallMarginEnd">
+                        <ObjectStatus id="headerStatusCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_HEADER_STATUS}" text="{MasterListModel>HeaderStatusTxt}"/>
+                        <ObjectStatus id="callOffCol" title="{i18n>PLANNING_CALENDAR_DETAIL_CALLOFF}"
+                            text="{path: 'MasterListModel>Calloffincl', formatter:'.formatter.addDaysToDuration'}"/>
+                        <ObjectStatus id="effortCol" title="{i18n>PLANNING_CALENDAR_DETAIL_EFFORT}"
+                            text="{path: 'MasterListModel>Duration', formatter:'.formatter.addDaysToDuration'}"/>
+                    </VBox>
+                    <VBox class="sapUiSmallMarginEnd">
+                        <ObjectStatus id="userStatusCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_USER_STATUS}" text="{MasterListModel>UserStatusTxt}"/>
+                        <ObjectStatus id="dataProtectionCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_DATA_PROTECTION}" text="{MasterListModel>DataProtect}"/>
+                        <ObjectStatus id="premiumEngagementCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_PREMIUM_ENGAGEMENT}" text="{MasterListModel>PremiumEng}"/>
+                        <ObjectStatus id="assignCountry" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_COUNTRY}" text="{MasterListModel>Country}"/>
+                    </VBox>
+                    <VBox class="sapUiSmallMarginEnd">
+                        <ObjectStatus title="{i18n>PLANNING_CALENDAR_DETAIL_EMPLOYEE}"
+                            text="{parts:[{path:'MasterListModel>StaffingLevel'},{path:'MasterListModel>FirstName'}, {path:'MasterListModel>LastName'}], formatter:'.formatter.staffingLevelWithName'}"/>
+                        <ObjectStatus id="userNameCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_EMPLOYEEID}" text="{MasterListModel>EmpID}"/>
+                    </VBox>
+                    <VBox>
+                        <ObjectStatus id="assignStartDateCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_START_DATE}"
+                            text="{path:'MasterListModel>AssignmentStartDate', type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'}}"/>
+                        <ObjectStatus id="assignEndDateCol" title="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_END_DATE}"
+                            text="{path:'MasterListModel>AssignmentEndDate', type: 'sap.ui.model.type.DateTime',formatOptions: {style: 'short'}}"/>
+                    </VBox>
+                </HBox>
+            </x:headerContent>
+            <x:sections>
+                <x:ObjectPageSection showTitle="false" class="customMargins">
+                    <x:subSections>
+                        <x:ObjectPageSubSection class="customMargins">
+                            <x:blocks>
+                                <VBox width="100%">
+                                    <fb:FilterBar id="filterBar" filterBarExpanded="false" reset="onReset" search="onFilterBarSearchButtonPressed"
+                                        clear=".VariantHelper.onFilterBarClear" showClearOnFB="true" showRestoreButton="false" showFilterConfiguration="false"
+                                        initialise=".onInitialiseFilterBar">
+                                        <fb:filterItems>
+                                            <fb:FilterItem name="D1" label="{i18n>VIEW_WORKLIST_DATE_RANGE}" visibleInFilterBar="false">
+                                                <fb:control>
+                                                    <DateRangeSelection id="idDateRange" change="handleChange" editable="false"/>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                            <fb:FilterItem name="A0" label="{i18n>VIEW_WORKLIST_ORGUNIT_LABEL}">
+                                                <fb:control>
+                                                    <reuseOrg:OrgUnitSelectComponent id="idForOrgId" onRetrieveData="retrieveOrgUnit"/>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                            <fb:FilterItem name="B0" label="{i18n>VIEW_WORKLIST_QUALIFICATIONS_LABEL}">
+                                                <fb:control>
+                                                    <reuseQual:QualificationSelectComponent id="idForQualificationid"/>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                            <fb:FilterItem name="C0" label="{i18n>VIEW_WORKLIST_EMPLOYEEID_LABEL}">
+                                                <fb:control>
+                                                    <reuseEmp:EmployeeSearchComponent id="idForEmpId"/>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                            <fb:FilterItem name="D0" label="{i18n>VIEW_WORKLIST_SERVICEAREA_LABEL}">
+                                                <fb:control>
+                                                    <MultiComboBox id="idForServArea" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="500px"
+                                                        selectedKeys="{VariantFilterModel>/ServArea}" items="{ path: 'ReuseModel>/ServiceAreaCategories', sorter: { path:'name' } }">
+                                                        <core:Item key="{ReuseModel>id}" text="{ReuseModel>name}"/>
+                                                    </MultiComboBox>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                            <fb:FilterItem name="A5" label="{i18n>VIEW_WORKLIST_SERVICE_TEAM_LABEL}">
+                                                <fb:control>
+                                                    <reuseTeam:ServiceTeamSelectComponent id="idServiceTeamForOrgId" filterPath="ServiceTeam"/>
+                                                </fb:control>
+                                            </fb:FilterItem>
+                                        </fb:filterItems>
+                                    </fb:FilterBar>
+                                    <reuselib:ResourcePlanningCalendarComponent id="resourcePlanningCalendarId" onStartDateChangeComplete=".onStartDateChange"
+                                        onCreateDialogConfirm=".createTimeAllocation" fullScreen="true" allocationCreated="onAllocationCreated" assignmentsEditable="true"
+                                        assignmentDeleted="onAssignmentDeleted" showCreateTimeAllocation="false"/>
+                                </VBox>
+                            </x:blocks>
+                        </x:ObjectPageSubSection>
+                    </x:subSections>
+                </x:ObjectPageSection>
+            </x:sections>
+        </x:ObjectPageLayout>
+        <semantic:customShareMenuContent>
+            <Button icon="sap-icon://action" press="onActionSheetPress" id="idForShareMenuContent" tooltip="{i18n>PLANNING_CALENDAR_EXCEL_BUTTON}" />
+        </semantic:customShareMenuContent>
+        <semantic:mainAction>
+            <semantic:MainAction id="assignSelectedItemsButton" enabled="false" text="{i18n>PLANNING_CALENDAR_ASSIGN_ITEMS}"
+                press="onAssignSelectedItemsClick"/>
+        </semantic:mainAction>
+        <semantic:customFooterContent>
+            <Button text="{i18n>PLANNING_CALENDAR_VIEW_CALENDAR}" press="onViewPersonalCalendarClick"/>
+        </semantic:customFooterContent>
+    </semantic:DetailPage>
+</mvc:View>

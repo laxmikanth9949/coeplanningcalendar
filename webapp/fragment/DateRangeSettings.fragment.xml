@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" controllerName="sap.coe.planning.calendar.fragment.DateRangeSelection">
+    <Dialog title="{i18n>FRAGMENT_DATERANGE_SELECTION_TITLE}" id="idForDateRangeSettingsDialog" afterOpen="openDateRangeDialog">
+        <l:VerticalLayout>
+            <l:HorizontalLayout>
+                <f:Form id="idEditTimeAllocationForm" class="editableForm" width="700px">
+                    <f:layout>
+                        <f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="2" emptySpanM="2" columnsL="3" columnsM="3" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer>
+                            <f:formElements>
+                                <f:FormElement>
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_DATERANGE_SELECTION_PASTWEEKS}" class="sapUiTinyMarginTop">
+                                            <layoutData>
+                                                <l:GridData span="L6 M6 S8" />
+                                            </layoutData>
+                                        </Label>
+                                    </f:label>
+                                    <f:fields>
+                                        <Input id="idForDateRangePast" type="Number" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_DATERANGE_SELECTION_FUTUREWEEKS}" class="sapUiTinyMarginTop">
+                                            <layoutData>
+                                                <l:GridData span="L6 M6 S8" />
+                                            </layoutData>
+                                        </Label>
+                                    </f:label>
+                                    <f:fields>
+                                        <Input id="idForDateRangeFuture"  type="Number" />
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </l:HorizontalLayout>
+        </l:VerticalLayout>
+        <buttons>
+            <Button id="idForSaveButton" type="Emphasized" text="{i18n>FRAGMENT_DATERANGE_SELECTION_OK}" press="onSelectDateRange" />
+            <Button id="idForCancelButton" text="{i18n>FRAGMENT_DATERANGE_SELECTION_CANCEL}" press="onCloseDialog" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

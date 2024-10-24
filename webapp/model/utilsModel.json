@@ -1,0 +1,188 @@
+{
+    "StaffingLevel": [{
+        "text": "Not Staffed",
+        "key": "A"
+    }, {
+        "text": "Staffed",
+        "key": "B"
+    }],
+
+    "UserStatus": [{
+        "text": "Not cancelled",
+        "key": "E0006",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "true",
+        "ID": "0"
+    },{
+        "text": "Cancelled",
+        "key": "E0031",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "false",
+        "ID": "1"
+    },{
+        "text": "Open",
+        "key": "E0001",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "false",
+        "ID": "2"
+    },{
+        "text": "Planned",
+        "key": "E0002",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "false",
+        "ID": "3"
+    },{
+        "text": "Staffed",
+        "key": "E0003",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "false",
+        "ID": "4"
+    },{
+        "text": "Date-New",
+        "key": "E0020",
+        "OrderType" : "Service Delivery Order",
+        "isNegated" : "false",
+        "ID": "5"
+    },{
+        "text": "Planned",
+        "key": "E0001",
+        "OrderType" : "Resource Request",
+        "isNegated" : "false",
+        "ID": "6"
+    }, {
+        "text": "Staffed",
+        "key": "E0003",
+        "OrderType" : "Resource Request",
+        "isNegated" : "false",
+        "ID": "7"
+    }, {
+        "text": "To be staffed",
+        "key": "E0011",
+        "OrderType" : "Resource Request",
+        "isNegated" : "false",
+        "ID": "8"
+    }],
+
+    "TransactionType": [{
+        "text": "Service Delivery Order",
+        "key": "ZSK1"
+    }, {
+        "text": "Resource Request",
+        "key": "ZS91"
+    }],
+
+    "CancellationStatus": [{
+        "text": "Cancelled",
+        "key" : "01"
+    }, {
+        "text": "Not Cancelled",
+        "key" : "02"
+    }],
+
+    "HeaderStatusKey": [{
+        "text": "New",
+        "key": "E0001"
+    },{
+        "text": "Delivery Confirmed",
+        "key": "E0002"
+    },{
+        "text": "Delivered",
+        "key": "E0005"
+    },{
+        "text": "Cancelled",
+        "key": "E0007"
+    },{
+        "text": "Delivery Preparation",
+        "key": "E0016"
+    }],
+
+   "TimeZones": [
+
+            { "text": "-12:00 GMT (International Date Line West)", "key": "-12:00" },
+            { "text": "-11:00 GMT (Midway Island, Samoa)","key": "-11:00" },
+            { "text": "-10:00 GMT (Hawaii)","key": "-10:00"},
+            { "text": "-09:00 GMT (Alaska)","key": "-09:00" },
+            { "text": "-08:00 GMT (Pacific Time (US & Canada))","key": "-08:00" },
+            { "text": "-08:00 GMT (Tijuana, Baja California)","key": "-08:00" },
+            { "text": "-07:00 GMT (Arizona)","key": "-07:00" },
+            { "text": "-07:00 GMT (Chihuahua, La Paz, Mazatlan)","key": "-07:00" },
+            { "text": "-07:00 GMT (Mountain Time (US & Canada))","key": "-07:00" },
+            { "text": "-06:00 GMT (Central America)","key": "-06:00" },
+            { "text": "-06:00 GMT (Central Time (US & Canada))","key": "-06:00" },
+            { "text": "-06:00 GMT (Guadalajara, Mexico City, Monterrey)","key": "-06:00" },
+            { "text": "-06:00 GMT (Saskatchewan)","key": "-06:00" },
+            { "text": "-05:00 GMT (Bogota, Lima, Quito, Rio Branco)","key": "-05:00" },
+            { "text": "-05:00 GMT (Eastern Time (US & Canada))","key": "-05:00" },
+            { "text": "-05:00 GMT (Indiana (East))","key": "-05:00" },
+            { "text": "-04:00 GMT (Atlantic Time (Canada))","key": "-04:00" },
+            { "text": "-04:00 GMT (Caracas, La Paz)","key": "-04:00" },
+            { "text": "-04:00 GMT (Manaus)","key": "-04:00" },
+            { "text": "-04:00 GMT (Santiago)","key": "-04:00" },
+            { "text": "-03:30 GMT (Newfoundland)","key": "-03:30" },
+            { "text": "-03:00 GMT (Brasilia)","key": "-03:00" },
+            { "text": "-03:00 GMT (Buenos Aires, Georgetown)","key": "-03:00" },
+            { "text": "-03:00 GMT (Greenland)","key": "-03:00" },
+            { "text": "-03:00 GMT (Montevideo)","key": "-03:00" },
+            { "text": "-02:00 GMT (Mid-Atlantic)","key": "-02:00" },
+            { "text": "-01:00 GMT (Cape Verde Is.)","key": "-01:00" },
+            { "text": "-01:00 GMT (Azores)","key": "-01:00" },
+            { "text": "+00:00 GMT (Casablanca, Monrovia, Reykjavik)","key": "+00:00" },
+            { "text": "+00:00 GMT (Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London)","key": "+00:00" },
+            { "text": "+01:00 GMT (Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna)","key": "+01:00" },
+            { "text": "+01:00 GMT (Belgrade, Bratislava, Budapest, Ljubljana, Prague)","key": "+01:00" },
+            { "text": "+01:00 GMT (Brussels, Copenhagen, Madrid, Paris)","key": "+01:00" },
+            { "text": "+01:00 GMT (Sarajevo, Skopje, Warsaw, Zagreb)","key": "+01:00" },
+            { "text": "+01:00 GMT (West Central Africa)","key": "+01:00" },
+            { "text": "+02:00 GMT (Amman)","key": "+02:00" },
+            { "text": "+02:00 GMT (Athens, Bucharest, Istanbul)","key": "+02:00" },
+            { "text": "+02:00 GMT (Beirut)","key": "+02:00" },
+            { "text": "+02:00 GMT (Cairo)","key": "+02:00" },
+            { "text": "+02:00 GMT (Harare, Pretoria)","key": "+02:00" },
+            { "text": "+02:00 GMT (Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius)","key": "+02:00" },
+            { "text": "+02:00 GMT (Jerusalem)","key": "+02:00" },
+            { "text": "+02:00 GMT (Minsk)","key": "+02:00" },
+            { "text": "+02:00 GMT (Windhoek)","key": "+02:00" },
+            { "text": "+03:00 GMT (Kuwait, Riyadh, Baghdad)","key": "+03:00" },
+            { "text": "+03:00 GMT (Moscow, St. Petersburg, Volgograd)","key": "+03:00" },
+            { "text": "+03:00 GMT (Nairobi)","key": "+03:00" },
+            { "text": "+03:00 GMT (Tbilisi)","key": "+03:00" },
+            { "text": "+03:30 GMT (Tehran)","key": "+03:30" },
+            { "text": "+04:00 GMT (Abu Dhabi, Muscat)","key": "+04:00" },
+            { "text": "+04:00 GMT (Baku)","key": "+04:00" },
+            { "text": "+04:00 GMT (Yerevan)","key": "+04:00" },
+            { "text": "+04:30 GMT (Kabul)","key": "+04:30" },
+            { "text": "+05:00 GMT (Yekaterinburg)","key": "+05:00" },
+            { "text": "+05:00 GMT (Islamabad, Karachi, Tashkent)","key": "+05:00"},
+            { "text": "+05:30 GMT (Sri Jayawardenapura)","key": "+05:30" },
+            { "text": "+05:30 GMT (Chennai, Kolkata, Mumbai, New Delhi)","key": "+05:30" },
+            { "text": "+05:45 GMT (Kathmandu)","key": "+05:45" },
+            { "text": "+06:00 GMT (Almaty, Novosibirsk)","key": "+06:00" },
+            { "text": "+06:00 GMT (Astana, Dhaka)","key": "+06:00" },
+            { "text": "+06:30 GMT (Yangon (Rangoon))","key": "+06:30" },
+            { "text": "+07:00 GMT (Bangkok, Hanoi, Jakarta)","key": "+07:00" },
+            { "text": "+07:00 GMT (Krasnoyarsk)","key": "+07:00" },
+            { "text": "+08:00 GMT (Beijing, Chongqing, Hong Kong, Urumqi)","key": "+08:00" },
+            { "text": "+08:00 GMT (Kuala Lumpur, Singapore)","key": "+08:00" },
+            { "text": "+08:00 GMT (Irkutsk, Ulaan Bataar)","key": "+08:00" },
+            { "text": "+08:00 GMT (Perth)","key": "+08:00" },
+            { "text": "+08:00 GMT (Taipei)","key": "+08:00" },
+            { "text": "+09:00 GMT (Osaka, Sapporo, Tokyo)" },
+            { "text": "+09:00 GMT (Seoul)","key": "+09:00"},
+            { "text": "+09:00 GMT (Yakutsk)","key": "+09:00" },
+            { "text": "+09:30 GMT (Adelaide)","key": "+09:30" },
+            { "text": "+09:30 GMT (Darwin)","key": "+09:30" },
+            { "text": "+10:00 GMT (Brisbane)","key": "+10:00" },
+            { "text": "+10:00 GMT (Canberra, Melbourne, Sydney)","key": "+10:00" },
+            { "text": "+10:00 GMT (Hobart)","key": "+10:00" },
+            { "text": "+10:00 GMT (Guam, Port Moresby)","key": "+10:00" },
+            { "text": "+10:00 GMT (Vladivostok)","key": "+10:00" },
+            { "text": "+11:00 GMT (Magadan, Solomon Is., New Caledonia)","key": "+11:00" },
+            { "text": "+12:00 GMT (Auckland, Wellington)","key": "+12:00" },
+            { "text": "+12:00 GMT (Fiji, Kamchatka, Marshall Is.)" ,"key": "+12:00"},
+            { "text": "+13:00 GMT (Nuku'alofa)","key": "+13:00"}
+        ],
+
+    "AssignSelectedOrderDialogModel": [
+        {}
+    ]
+}

@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" controllerName="sap.coe.planning.calendar.fragment.TableP13nDialog" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <Dialog title="{i18n>TABLEPERSO_COLUMNS}" id="tablePersDialog" beforeOpen="onBeforeOpen" contentHeight="580px" verticalScrolling="false">
+        <Toolbar design="Auto">
+            <Button id="upButton" icon="sap-icon://arrow-top" enabled="true" iconFirst="true" tooltip="{i18n>TABLEPERSO_MOVEUP}" press="moveItem"/>
+            <Button id="downButton" icon="sap-icon://arrow-bottom" enabled="true" iconFirst="true" tooltip="{i18n>TABLEPERSO_MOVEDOWN}" press="moveItem" />
+        </Toolbar>
+        <Toolbar class="sapMPersoDialogFixedBar" design="Transparent" active="false">
+            <Button icon="sap-icon://undo" iconFirst="true" press="resetTableToDefault" tooltip="Restore Default Values" />
+            <ToolbarSpacer/>
+            <CheckBox selected="false" text="{i18n>TABLEPERSO_SELECT_ALL}" textAlign="Begin" select="onSelectAll" class="sapUiTinyMarginEnd" />
+        </Toolbar>
+        <ScrollContainer width="100%" height="465px" horizontal="false" vertical="true">
+            <List id="columnList" includeItemInSelection="true" mode="SingleSelectMaster" growing="false" keyboardMode="Navigation" swipeDirection="Both" items="{/Columns}">
+                <InputListItem type="Inactive" label="{path: 'id', formatter: '.formatter.retrieveColumnHeader'}" class="sapMPersoDialogLI">
+                    <CheckBox selected="{visible}" select="setColumnVisibilty" app:colId="{id}" />
+                </InputListItem>
+            </List>
+        </ScrollContainer>
+        <buttons>
+            <Button id="idForSaveButton" text="{i18n>FRAGMENT_DATERANGE_SELECTION_OK}" press="onConfirmColumns" />
+            <Button id="idForCancelButton" text="{i18n>FRAGMENT_DATERANGE_SELECTION_CANCEL}" press="onCancelChanges" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

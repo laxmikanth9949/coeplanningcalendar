@@ -1,0 +1,419 @@
+{
+    "d": {
+        "results": [{
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'd6f64850-0938-964f-aa1d-7c6545706e96')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'd6f64850-0938-964f-aa1d-7c6545706e96')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "d6f64850-0938-964f-aa1d-7c6545706e96",
+            "ProductID": "0000000000000000000000000000000009500011",
+            "ProductDescription": "SAP GOINGLIVE CHECK"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'b97281ec-7afc-e844-83dc-35e1f514c489')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'b97281ec-7afc-e844-83dc-35e1f514c489')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "b97281ec-7afc-e844-83dc-35e1f514c489",
+            "ProductID": "0000000000000000000000000000000009500012",
+            "ProductDescription": "SAP GOINGLIVE FUNCTIONAL UPGRADE CHECK"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'054310f5-7782-4b43-ba54-940984cf4443')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'054310f5-7782-4b43-ba54-940984cf4443')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "054310f5-7782-4b43-ba54-940984cf4443",
+            "ProductID": "0000000000000000000000000000000009500015",
+            "ProductDescription": "DO NOT USE GOINGLIVE PLANNING SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'33cf6c1e-a561-ab41-8823-26451029012e')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'33cf6c1e-a561-ab41-8823-26451029012e')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "33cf6c1e-a561-ab41-8823-26451029012e",
+            "ProductID": "0000000000000000000000000000000009500016",
+            "ProductDescription": "GOINGLIVE FEASIBILITY SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'62d0a8c0-fdcf-464b-b266-90a9d3288721')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'62d0a8c0-fdcf-464b-b266-90a9d3288721')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "62d0a8c0-fdcf-464b-b266-90a9d3288721",
+            "ProductID": "0000000000000000000000000000000009500017",
+            "ProductDescription": "GOINGLIVE ANALYSIS SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'a731d0f3-8aa0-8c4c-8597-fcd2491a1b93')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'a731d0f3-8aa0-8c4c-8597-fcd2491a1b93')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "a731d0f3-8aa0-8c4c-8597-fcd2491a1b93",
+            "ProductID": "0000000000000000000000000000000009500018",
+            "ProductDescription": "DO NOT USE GOINGLIVE OPTIMIZATION SESSI"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'3f3e3996-d7c8-7444-9056-d4ede79b325e')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'3f3e3996-d7c8-7444-9056-d4ede79b325e')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "3f3e3996-d7c8-7444-9056-d4ede79b325e",
+            "ProductID": "0000000000000000000000000000000009500019",
+            "ProductDescription": "GOINGLIVE VERIFICATION SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'f805f8e8-4cf8-d54b-b6a8-623f1f3a7e1a')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'f805f8e8-4cf8-d54b-b6a8-623f1f3a7e1a')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "f805f8e8-4cf8-d54b-b6a8-623f1f3a7e1a",
+            "ProductID": "0000000000000000000000000000000009500020",
+            "ProductDescription": "DO NOT USE GOINGLIVE FU PLANNING SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'931bff14-1897-a447-a550-686e5da7ae37')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'931bff14-1897-a447-a550-686e5da7ae37')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "931bff14-1897-a447-a550-686e5da7ae37",
+            "ProductID": "0000000000000000000000000000000009500021",
+            "ProductDescription": "GOINGLIVE UPGRADE ANALYSIS SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'3851dab0-b9a2-0242-8ad4-d92030ec9a93')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'3851dab0-b9a2-0242-8ad4-d92030ec9a93')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "3851dab0-b9a2-0242-8ad4-d92030ec9a93",
+            "ProductID": "0000000000000000000000000000000009500053",
+            "ProductDescription": "GOINGLIVE UPGRADE VERIFICATION SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'a601a46f-f657-f948-86fe-c474cde94fc6')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'a601a46f-f657-f948-86fe-c474cde94fc6')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "a601a46f-f657-f948-86fe-c474cde94fc6",
+            "ProductID": "0000000000000000000000000000000009500246",
+            "ProductDescription": "SAP GOING LIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'99fcb146-c83c-3743-8a32-cd4a75895280')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'99fcb146-c83c-3743-8a32-cd4a75895280')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "99fcb146-c83c-3743-8a32-cd4a75895280",
+            "ProductID": "0000000000000000000000000000000009500247",
+            "ProductDescription": "GOING LIVE SUPPORT SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'2da2e396-aaf0-694f-a601-779c1274e430')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'2da2e396-aaf0-694f-a601-779c1274e430')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "2da2e396-aaf0-694f-a601-779c1274e430",
+            "ProductID": "0000000000000000000000000000000009500270",
+            "ProductDescription": "SAP GOVERNMENT SUPPORT SERVICES"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ed28ea8c-798a-5b4e-bbf7-219bd08ec8c5')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ed28ea8c-798a-5b4e-bbf7-219bd08ec8c5')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "ed28ea8c-798a-5b4e-bbf7-219bd08ec8c5",
+            "ProductID": "0000000000000000000000000000000009500460",
+            "ProductDescription": "DO NOT USE SAP GOINGLIVE CHECK (SOLUTION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'8fbe7bab-e557-5041-9259-4478bacf09bd')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'8fbe7bab-e557-5041-9259-4478bacf09bd')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "8fbe7bab-e557-5041-9259-4478bacf09bd",
+            "ProductID": "0000000000000000000000000000000009500480",
+            "ProductDescription": "GOING LIVE SUPPORT SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'cf236c64-c483-704c-97d0-592aeafafdf3')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'cf236c64-c483-704c-97d0-592aeafafdf3')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "cf236c64-c483-704c-97d0-592aeafafdf3",
+            "ProductID": "0000000000000000000000000000000009500694",
+            "ProductDescription": "GO-LIVE EXECUTION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'2ef3b986-a419-ed44-87f4-33eda5677cde')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'2ef3b986-a419-ed44-87f4-33eda5677cde')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "2ef3b986-a419-ed44-87f4-33eda5677cde",
+            "ProductID": "0000000000000000000000000000000009500742",
+            "ProductDescription": "DO NOT USE SAP GOINGLIVE CK FOR SOLUTION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc517698-65ce-2cf1-a508-0014c258367b')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc517698-65ce-2cf1-a508-0014c258367b')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "dc517698-65ce-2cf1-a508-0014c258367b",
+            "ProductID": "0000000000000000000000000000000009500850",
+            "ProductDescription": "DON'T USE!!! SAP GOINGLIVE CHECK ELEMENT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc6cc5fe-7e16-a0f1-a508-0014c258367b')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc6cc5fe-7e16-a0f1-a508-0014c258367b')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "dc6cc5fe-7e16-a0f1-a508-0014c258367b",
+            "ProductID": "0000000000000000000000000000000009500901",
+            "ProductDescription": "GO-LIVE EXEC SC ACTIVITY/EXPENSES"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc7d89ab-24a7-d1f1-ae0a-00110aa04aa3')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dc7d89ab-24a7-d1f1-ae0a-00110aa04aa3')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "dc7d89ab-24a7-d1f1-ae0a-00110aa04aa3",
+            "ProductID": "0000000000000000000000000000000009500914",
+            "ProductDescription": "GOING LIVE PHASE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dd1daf3a-0dd7-5df1-9973-00132169a275')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dd1daf3a-0dd7-5df1-9973-00132169a275')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "dd1daf3a-0dd7-5df1-9973-00132169a275",
+            "ProductID": "0000000000000000000000000000000009501041",
+            "ProductDescription": "SAP HOSTING GOLIVE VERIFICATION (GLVS)"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dd4d9c7f-6189-fcf1-8ea5-00132169b015')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'dd4d9c7f-6189-fcf1-8ea5-00132169b015')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "dd4d9c7f-6189-fcf1-8ea5-00132169b015",
+            "ProductID": "0000000000000000000000000000000009501110",
+            "ProductDescription": "GOINGLIVE FU ASSESSMENT SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ddc795b0-6a5d-acf1-bf45-001185138ad3')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ddc795b0-6a5d-acf1-bf45-001185138ad3')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "ddc795b0-6a5d-acf1-bf45-001185138ad3",
+            "ProductID": "0000000000000000000000000000000009501330",
+            "ProductDescription": "DO NOT USE SAP GOINGLIVE CHECK: SERVICE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ddff4cc5-4d3c-69f1-8561-0014c257ef95')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'ddff4cc5-4d3c-69f1-8561-0014c257ef95')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "ddff4cc5-4d3c-69f1-8561-0014c257ef95",
+            "ProductID": "0000000000000000000000000000000009501366",
+            "ProductDescription": "LT GOLIVE SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'de3322c2-4a1d-31f1-8530-00110aa07b07')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'de3322c2-4a1d-31f1-8530-00110aa07b07')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "de3322c2-4a1d-31f1-8530-00110aa07b07",
+            "ProductID": "0000000000000000000000000000000009501420",
+            "ProductDescription": "DO NOT USE !! SAP CQC GOINGLIVE OPTIMIZA"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'de332eaf-3ce9-d5f1-8530-00110aa07b07')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'de332eaf-3ce9-d5f1-8530-00110aa07b07')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "de332eaf-3ce9-d5f1-8530-00110aa07b07",
+            "ProductID": "0000000000000000000000000000000009501421",
+            "ProductDescription": "SAP CQC GOING LIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'df72d2a3-ce19-aaf1-bb3f-001cc4aa6788')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'df72d2a3-ce19-aaf1-bb3f-001cc4aa6788')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "df72d2a3-ce19-aaf1-bb3f-001cc4aa6788",
+            "ProductID": "0000000000000000000000000000000009501601",
+            "ProductDescription": "POST GO-LIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-03aa-1ed0-8e9d-5efcfe3cb088')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-03aa-1ed0-8e9d-5efcfe3cb088')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4c2-03aa-1ed0-8e9d-5efcfe3cb088",
+            "ProductID": "0000000000000000000000000000000009501710",
+            "ProductDescription": "GOINGLIVE VERIFICATION SESSION (NEW)"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-1840-1ed0-acf1-9871b668d794')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-1840-1ed0-acf1-9871b668d794')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "18a9055a-1840-1ed0-acf1-9871b668d794",
+            "ProductID": "0000000000000000000000000000000009501830",
+            "ProductDescription": "GOINGLIVE ANALYSIS SESSION (NEW)"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-1840-1ed0-ae9d-689d60a29794')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-1840-1ed0-ae9d-689d60a29794')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "18a9055a-1840-1ed0-ae9d-689d60a29794",
+            "ProductID": "0000000000000000000000000000000009501833",
+            "ProductDescription": "GOINGLIVE UPGRADE ANALYSIS SESSION (NEW)"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-03aa-1ed0-b393-ba1637d61265')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-03aa-1ed0-b393-ba1637d61265')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4c2-03aa-1ed0-b393-ba1637d61265",
+            "ProductID": "0000000000000000000000000000000009501855",
+            "ProductDescription": "GOING LIVE SUPPORT SESSION (NEW)"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4aa-6788-1ee1-8088-859a7c0e88b0')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4aa-6788-1ee1-8088-859a7c0e88b0')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4aa-6788-1ee1-8088-859a7c0e88b0",
+            "ProductID": "0000000000000000000000000000000009501928",
+            "ProductDescription": "CONFIRM MILESTONE:GOLIVE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ed1-978b-7a31fc63fe68')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ed1-978b-7a31fc63fe68')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4ab-6d30-1ed1-978b-7a31fc63fe68",
+            "ProductID": "0000000000000000000000000000000009502035",
+            "ProductDescription": "OCC GOLIVE SERVICE SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f91-1ed1-a899-90780c5074d3')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f91-1ed1-a899-90780c5074d3')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9f91-1ed1-a899-90780c5074d3",
+            "ProductID": "0000000000000000000000000000000009502252",
+            "ProductDescription": "PERFORMANCE & GOALS PRODUCT ENTERPRISE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed1-add9-0397d5d40fe8')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed1-add9-0397d5d40fe8')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9f90-1ed1-add9-0397d5d40fe8",
+            "ProductID": "0000000000000000000000000000000009502299",
+            "ProductDescription": "BPO GOLIVE SUPPORT SESSION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-b5b6-1ed1-acf5-a028cf78c421')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4c2-b5b6-1ed1-acf5-a028cf78c421')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4c2-b5b6-1ed1-acf5-a028cf78c421",
+            "ProductID": "0000000000000000000000000000000009502304",
+            "ProductDescription": "DO NOT USE SAP ESRV BPO GOLIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ee1-afd4-df1091b45a76')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ee1-afd4-df1091b45a76')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9f90-1ee1-afd4-df1091b45a76",
+            "ProductID": "0000000000000000000000000000000009502342",
+            "ProductDescription": "SAP ESRV OCC GOLIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b09f-da6009b18014')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b09f-da6009b18014')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4ab-6d30-1ee1-b09f-da6009b18014",
+            "ProductID": "0000000000000000000000000000000009502368",
+            "ProductDescription": "DO NOT USE SAP ESRV GOING LIVE SUPPORT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b0a0-0089ed6e801e')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b0a0-0089ed6e801e')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4ab-6d30-1ee1-b0a0-0089ed6e801e",
+            "ProductID": "0000000000000000000000000000000009502369",
+            "ProductDescription": "XXXX SAP ESRV GOINGLIVE CHECK FOR SOL"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b1b7-96c1b1f74199')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001cc4ab-6d30-1ee1-b1b7-96c1b1f74199')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001cc4ab-6d30-1ee1-b1b7-96c1b1f74199",
+            "ProductID": "0000000000000000000000000000000009502371",
+            "ProductDescription": "DO NOT USE SAP ESRV GOINGLIVE CHECK"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed1-b498-48c24c420004')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed1-b498-48c24c420004')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9f90-1ed1-b498-48c24c420004",
+            "ProductID": "0000000000000000000000000000000009502407",
+            "ProductDescription": "DO NOT USE SAP ESRV GOINGLIVE FUNC UPG"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-183e-1ed2-81e2-92926f5496e3')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-183e-1ed2-81e2-92926f5496e3')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "18a9055a-183e-1ed2-81e2-92926f5496e3",
+            "ProductID": "0000000000000000000000000000000009502542",
+            "ProductDescription": "DO NOT USE SAP ESRV LT GOLIVE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed2-a4a8-2b747b2f4cfb')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9f90-1ed2-a4a8-2b747b2f4cfb')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9f90-1ed2-a4a8-2b747b2f4cfb",
+            "ProductID": "0000000000000000000000000000000009502771",
+            "ProductDescription": "GO-LIVE EXPERIENCE"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-183e-1ee2-b6b4-4996642fcfb0')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'18a9055a-183e-1ee2-b6b4-4996642fcfb0')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "18a9055a-183e-1ee2-b6b4-4996642fcfb0",
+            "ProductID": "0000000000000000000000000000000009502840",
+            "ProductDescription": "DO NOT USE SAP EGI GOLDTAX INT"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9a18-1ed3-9285-fdf396be454e')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'001517a0-9a18-1ed3-9285-fdf396be454e')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "001517a0-9a18-1ed3-9285-fdf396be454e",
+            "ProductID": "0000000000000000000000000000000009503072",
+            "ProductDescription": "GOAL MANAGEMENT / EXECUTION"
+        }, {
+            "__metadata": {
+                "id": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'82a2964e-e54a-6e42-8fa9-8d88ff9b5923')",
+                "uri": "https://pgtmain.wdf.sap.corp/sap/opu/odata/sap/ZS_AGS_DASHBOARDS_SRV/ServiceProductSet(guid'82a2964e-e54a-6e42-8fa9-8d88ff9b5923')",
+                "type": "ZS_AGS_DASHBOARDS_SRV.ServiceProduct"
+            },
+            "ProductGuid": "82a2964e-e54a-6e42-8fa9-8d88ff9b5923",
+            "ProductID": "ZS119500053",
+            "ProductDescription": "DO NOT USE GOINGLIVE FU VERIFICATION"
+        }]
+    }
+}

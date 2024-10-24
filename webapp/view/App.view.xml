@@ -1,0 +1,9 @@
+<mvc:View 
+    controllerName="sap.coe.planning.calendar.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <App id="idAppControl" />
+    <SplitApp id="idSplitAppControl" />
+</mvc:View>

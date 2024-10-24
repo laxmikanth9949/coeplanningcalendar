@@ -1,0 +1,36 @@
+<mvc:View height="100%" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sap.coe.planning.calendar.controller.PlanningCalendar"
+    displayBlock="true">
+    <Page id="page" title="{i18n>VIEW_WORKLIST_TABLE_TITLE}">
+        <content>
+            <List id="worklistTable" items="{ path: 'MasterListModel>/ResDemandSet', groupHeaderFactory: '.createGroupHeader' }"
+                mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingScrollToLoad="true" updateStarted="onUpdateStarted"
+                updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
+                <items>
+                    <ObjectListItem type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}" title="{MasterListModel>Customer}"
+                        number="CW {path:'MasterListModel>CalenderWeek'}" press="onSelectionChange">
+                        <firstStatus>
+                            <ObjectStatus
+                                text="{parts:[{path:'MasterListModel>StaffingLevel'}, {path:'MasterListModel>FirstName'}, {path:'MasterListModel>LastName'}], formatter:'.formatter.staffingLevelWithName'}"/>
+                        </firstStatus>
+                        <attributes>
+                            <ObjectAttribute
+                                text="{parts:[{path:'MasterListModel>DemandID'}, {path:'MasterListModel>ItemNo'}], formatter:'.formatter.toStringWithSpacer'}"/>
+                            <ObjectAttribute text="{MasterListModel>FirstQualificationDescription}"/>
+                        </attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <headerContent>
+            <Button id="idSettings" icon="sap-icon://sort" tooltip="{i18n>SORT_ITEMS_TOOLTIP}" press="onSortTablePress"/>
+            <ToggleButton id="idForMultiSelectAction" icon="sap-icon://multi-select" tooltip="{i18n>MULTI_SELECT_TOOLTIP}" press="onMultiSelectPress"/>
+        </headerContent>
+        <footer>
+            <Bar/>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://add" tooltip="{i18n>ADD_DEMAND_TOOLTIP}" press="onAddDemands"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

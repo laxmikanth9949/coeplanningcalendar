@@ -1,0 +1,128 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" controllerName="sap.coe.planning.calendar.fragment.AssignServiceOrder">
+    <Dialog title="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_TITLE}" id="idForAssignServiceOrderDialog" beforeOpen="onBeforeOpen">
+        <l:VerticalLayout>
+            <l:HorizontalLayout>
+                <f:Form id="idEditTimeAllocationForm" class="editableForm" formContainers="{AssignSelectedOrderDialogModel>/}" width="700px"    >
+                    <f:layout>
+                        <f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="0" emptySpanM="0" columnsL="3" columnsM="3" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer>
+                            <f:formElements>
+                                <f:FormElement>
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_COLUMN_ASSIGNMENT_DETAILS}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Link text="{parts:[{path:'AssignSelectedOrderDialogModel>DemandId'}, {path:'AssignSelectedOrderDialogModel>ItemNo'}], formatter:'.formatterReuse.seperateWithSlash'}" press="onItemDescriptionLinkPress" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_COLUMN_CUSTOMER}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{AssignSelectedOrderDialogModel>Customer}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_COLUMN_ITEM_DESCRIPTION}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{AssignSelectedOrderDialogModel>ItemDescription}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>PLANNING_CALENDAR_DETAIL_SERVICE}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{AssignSelectedOrderDialogModel>HeaderDescription}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                 <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_EDIT_SERVICE_ORDER_QUALIFICATION}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{AssignSelectedOrderDialogModel>QualificationTxt}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_EDIT_SERVICE_ORDER_CALLOFFDAYS}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{path:'AssignSelectedOrderDialogModel>CallOff', formatter:'.formatterReuse.addDaysToDuration'}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement >
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_EDIT_SERVICE_ORDER_DURATION}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{path:'AssignSelectedOrderDialogModel>Duration', formatter:'.formatterReuse.addDaysToDuration'}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_ASSIGNED_EMPLOYEE}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <Label text="{AssignSelectedOrderDialogModel>EmployeeName}" class="sapUiTinyMarginTop"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_START_DATE_TIME}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <DatePicker dateValue="{AssignSelectedOrderDialogModel>BegDate}" valueFormat="yyyy-MM-dd" change="onDatesChanged"/>
+                                        <TimePicker dateValue="{AssignSelectedOrderDialogModel>StartTime}" valueFormat="HH:mm" change="onDatesChanged"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement>
+                                    <f:label>
+                                        <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_END_DATE_TIME}" class="sapUiTinyMarginTop"/>
+                                    </f:label>
+                                    <f:fields>
+                                        <DatePicker dateValue="{AssignSelectedOrderDialogModel>EndDate}" valueFormat="yyyy-MM-dd" change="onDatesChanged"/>
+                                        <TimePicker dateValue="{AssignSelectedOrderDialogModel>EndTime}" valueFormat="HH:mm" change="onDatesChanged"/>
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+                <core:Icon visible="false" class="sapUiSmallMarginTop sapUiSmallMarginEnd" size="25px" src="sap-icon://add" press="onAddPersonToAssignment"/> 
+
+            </l:HorizontalLayout>
+        </l:VerticalLayout>
+
+        <f:Form visible="false">
+            <f:layout>
+                <f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="0" emptySpanM="0" columnsL="3" columnsM="3" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:FormElement>
+                        <f:label>
+                            <Label text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_TIME_ZONE}" class="sapUiTinyMarginTop"/>
+                        </f:label>
+                        <f:fields>
+                            <ComboBox items="{UtilsModel>/TimeZones}">
+                                <core:Item text="{UtilsModel>text}" key="{UtilsModel>key}" />
+                            </ComboBox>
+                        </f:fields>
+                    </f:FormElement>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        <buttons>
+            <Button text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_SAVE_ALL_BUTTON}" press="onSaveAllAssignServiceOrder" visible="false" />
+            <Button text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_SAVE_BUTTON}" press="onSaveAssignServiceOrder" />
+            <Button text="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_CANCEL_BUTTON}" press="onCloseDialog" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

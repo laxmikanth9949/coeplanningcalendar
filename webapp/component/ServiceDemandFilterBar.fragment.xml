@@ -1,0 +1,106 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar" xmlns:reuseQual="sap.coe.capacity.reuselib.controls.QualificationSelect" xmlns:reuseTeam="sap.coe.capacity.reuselib.controls.ServiceTeamSelect">
+    <fb:FilterBar id="idForFilterBar" search="onSearch" showClearButton="true" showClearOnFB="true" clear="onClear" filterContainerWidth="20em" showFilterConfiguration="false">
+        <fb:filterItems>
+            <fb:FilterItem name="A0" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_START_END_DATE}">
+                <fb:control>
+                    <DateRangeSelection id="idForStartEndDate" change="onDatePickerValueChange" dateValue="{VariantFilterModel>/startDate}" secondDateValue="{VariantFilterModel>/endDate}" />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="A2" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_STAFFING_LEVEL}">
+                <fb:control>
+                    <MultiComboBox id="idForStaffingLevel" width="100%" items="{UtilsModel>/StaffingLevel}" selectedKeys="{VariantFilterModel>/StaffingLevel}">
+                        <core:Item text="{UtilsModel>text}" key="{UtilsModel>key}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="A4" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_ORDER_NUMBER}">
+                <fb:control>
+                    <MultiInput id="idForDemandID" width="100%" type="Number" showValueHelp="false" tokens="{
+                                              path: 'VariantFilterModel>/DemandID'
+                                          }" tokenUpdate="onTokenChange">
+                        <tokens>
+                            <Token key="{VariantFilterModel>id}" text="{VariantFilterModel>name}" />
+                        </tokens>
+                    </MultiInput>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="A5" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_ORGANIZATION}">
+                <fb:control>
+                    <reuseTeam:ServiceTeamSelectComponent id="idForOrganization"></reuseTeam:ServiceTeamSelectComponent>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="B1" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_ORDER_TYPE}">
+                <fb:control>
+                    <MultiComboBox id="idForTransactionType" width="100%" items="{UtilsModel>/TransactionType}" selectedKeys="{VariantFilterModel>/TransactionType}">
+                        <core:Item text="{UtilsModel>text}" key="{UtilsModel>key}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="B4" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_QUALIFICATION}">
+                <fb:control>
+                    <reuseQual:QualificationSelectComponent id="idForQualification"></reuseQual:QualificationSelectComponent>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="B5" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_SERVICE_PRODUCT}">
+                <fb:control>
+                    <MultiInput id="idForProductID" width="100%" valueHelpRequest="onProductSearchOpen" enableMultiLineMode="true" tokens="{
+                                              path: 'VariantFilterModel>/ProductID'
+                                          }" tokenUpdate="onTokenChange">
+                        <tokens>
+                            <Token key="{VariantFilterModel>id}" text="{VariantFilterModel>name}" />
+                        </tokens>
+                    </MultiInput>
+                </fb:control>
+            </fb:FilterItem>
+            
+   <!--Awaiting backend changes to implement  
+            <fb:FilterItem name="C12" label="{i18n>FRAGMENT_ASSIGN_SERVICE_ORDER_COLUMN_ITEM_NUMBER}">
+                <fb:control>
+                    <MultiInput id="idForItemNo" width="100%" type="Number" showValueHelp="false" enableMultiLineMode="true" tokens="{
+                    path: 'VariantFilterModel>/ItemNo'
+                    }" tokenUpdate= "onTokenChange">
+                    <tokens>
+                    	  <Token key="{VariantFilterModel>id}" text="{VariantFilterModel>name}" />
+                    	</tokens>
+                    	</MultiInput>
+                </fb:control>
+            </fb:FilterItem>
+           -->
+            <fb:FilterItem name="B7" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_EXTERNAL}">
+                <fb:control>
+                    <Input id="idForExtReference" value="{VariantFilterModel>/externalReference}" />
+                </fb:control>
+            </fb:FilterItem>
+
+            <!-- Moved to next wave, waiting for backend changes -->
+            <!-- <fb:FilterItem name="D0" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_HEADER_STATUS}">
+                <fb:control>
+                    <MultiComboBox id="idForHeaderStatusKey" width="100%" items="{path: 'UtilsModel>/HeaderStatusKey'}" selectedKeys="{VariantFilterModel>/HeaderStatusKey}">
+                        <core:Item text="{UtilsModel>text}" key="{UtilsModel>key}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterItem> -->
+
+            <fb:FilterItem name="B3" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_USER_STATUS}">
+                <fb:control>
+                    <ComboBox showSecondaryValues="true" width="100%" id="idForUserStatus" items="{UtilsModel>/UserStatus}" selectedKey="{VariantFilterModel>/UserStatus}" selectionChange="onUserStatusChange">
+                        <core:ListItem key="{UtilsModel>ID}" text="{UtilsModel>text}" additionalText="{UtilsModel>OrderType}" />
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterItem>
+
+            <fb:FilterItem name="B2" mandatory="true" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_CANCELLACTION_STATUS}">
+                <fb:control>
+                    <ComboBox width="100%" id="idForCancellationStatus" items="{UtilsModel>/CancellationStatus}" selectedKey="{VariantFilterModel>/CancellationStatus}" selectionChange="onCancelationStatusChange">
+                        <core:Item key="{UtilsModel>key}" text="{UtilsModel>text}" />
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="C1" label="{i18n>COMPONENT_SERVICE_DEMAND_FILTERBAR_COUNTRY_CODE}">
+                <fb:control>
+                    <Input id="idForCountry" value="{VariantFilterModel>/Country}" />
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

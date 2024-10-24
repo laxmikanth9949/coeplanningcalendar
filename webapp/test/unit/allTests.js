@@ -1,0 +1,23 @@
+sap.ui.define([
+    "test/unit/component/ServiceDemandFilterBar",
+    "test/unit/controller/App.controller",
+    "test/unit/controller/Detail.controller",
+    "test/unit/controller/PlanningCalendar.controller",
+    "test/unit/controller/Worklist.controller",
+    "test/unit/fragment/ActionSheet.fragment.controller",
+    "test/unit/fragment/AssignServiceOrder.fragment.controller",
+    "test/unit/fragment/EmployeeSearch.fragment.controller",
+    "test/unit/fragment/SelectServiceOrder.fragment.controller",
+    "test/unit/fragment/ServiceDemandDetails.fragment.controller",
+    "test/unit/fragment/TableSettings.fragment.controller",
+    "test/unit/util/formatter",
+    "test/unit/util/helpers",
+    "test/unit/util/i18n",
+    "test/unit/fragment/Organisation.fragment.controller",
+    "test/unit/fragment/ProductSearch.fragment.controller",
+    "test/unit/controls/ResourcePlanningCalendar/ResourcePlanningCalendarComponent",
+    "test/unit/utils/helpers",
+    "test/unit/utils/formatter",
+    "test/unit/utils/datamanager",
+    "test/unit/utils/i18n"
+], function() { "use strict"; });

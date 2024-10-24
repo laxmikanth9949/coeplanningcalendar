@@ -1,0 +1,170 @@
+<mvc:View controllerName="sap.coe.planning.calendar.controller.Worklist" class="sapUiSizeCompact" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:PCComponents="sap.coe.planning.calendar.component" xmlns:EmpSingleSelect="sap.coe.capacity.reuselib.controls.EmployeeSingleSelect">
+    <Page id="page">
+        <content>
+            <PCComponents:ServiceDemandFilterBar id="ServiceDemandFilterBar" search="onSearch"/>
+                
+            <Table selectionChange="onTableSelectionChange" mode="MultiSelect" items="{/ResDemandSet}" id="worklistTable" fixedLayout="false" width="100%" updateFinished="updateTableSorting" sticky="ColumnHeaders">
+                <headerToolbar>
+                    <Toolbar>
+                        
+                        <Label id="numDemands"  class="sapUiSmallMarginEnd" />
+                        <ToolbarSpacer />
+                        <Button id="idtimezonebtn" class="sapUiSizeCompact" text="{i18n>VIEW_MYSTAFFING_TIMEZONE_TEXT_SELECT}" tooltip="Please Select the TimeZone" press="_showSettingsDialog" type="Emphasized"></Button>
+                        <Label id="timezoneSelected" text="{parts: [
+                          {path: 'i18n>VIEW_WORKLIST_TIMEZONE_TEXT'},
+                          {path: 'TimeZone>/SelectedTimeZone'},
+                          {path: 'TimeZone>/'}
+                        ], formatter: '.formatterReuse.displayTimeZone'}" class="sapUiSmallMarginEnd" />
+                        <Button id="sortItems" tooltip="{i18n>SORT_ITEMS_TOOLTIP}" icon="sap-icon://sort" press="onSortTablePress" />
+                        <Button tooltip="{i18n>EDIT_ASSIGNMENTS_TOOLTIP}" id="editItems" icon="sap-icon://add-employee" press="onEditAssignment" />
+                        <Button tooltip="{i18n>SAVE_ASSIGNMENTS_TOOLTIP}" id="assignItems" icon="sap-icon://save" enabled="{= ${BusyModel>/bAssignSaveDisabled} !== true}" press="onAssignItems" visible="false" />
+                        <Button tooltip="{i18n>EDIT_DELETE_TOOLTIP}" id="deleteItems" icon="sap-icon://delete" press="onDeleteSOAssignments" visible="false" />
+                        <Button icon="sap-icon://action-settings" id="idDateRangeSelection" tooltip="{i18n>STEP_SETTINGS_TOOLTIP}" press="onDateRangeSelectionPress" />
+                        <Button icon="sap-icon://provision" id="idPersonalization" tooltip="{i18n>TABLE_PERS_TOOLTIP}" press="onTablePersonalise"/>
+                    </Toolbar>
+                </headerToolbar>
+                <!-- Personalize columns feature relies on column id's -->
+                <!-- 'Sort Table' needs to be adjusted when adding/removing columns -->
+                <columns>
+                    <Column id="ratingCol" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_RATING}" />
+                    </Column>
+                    <Column id="scopeDate" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_SCOPE_DATE}" />
+                    </Column>
+                    <Column id="cwCol" demandPopin="true" width="3%">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_CALENDAR_WEEK}" />
+                    </Column>
+                    <Column id="startDateCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_START_DATE}" />
+                    </Column>
+                    <Column id="startTimeCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_START_TIME}" />
+                    </Column>
+                    <Column id="endDateCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_END_DATE}" />
+                    </Column>
+                    <Column id="endTimeCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_END_TIME}" />
+                    </Column>
+                    <Column id="callOffCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_CALL_OFF}" />
+                    </Column>
+                    <Column id="effortCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_EFFORT}" />
+                    </Column>
+                    <Column id="customerCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_CUSTOMER}" />
+                    </Column>
+                    <Column id="customerERPCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_CUSTOMER_ERP}" />
+                    </Column>
+                    <Column id="premiumEngagementCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_PREMIUM_ENGAGEMENT}" />
+                    </Column>
+                    <Column id="dataProtectionCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_DATA_PROTECTION}" />
+                    </Column>
+                    <Column id="demandIdCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_DEMAND_ID}" />
+                    </Column>
+                    <Column id="itemNoCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ITEM_NUMBER}" />
+                    </Column>
+                    <Column id="headerStatusCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_HEADER_STATUS}" />
+                    </Column>
+                    <Column id="userStatusCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_USER_STATUS}" />
+                    </Column>
+                    <Column id="headerDescCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_HEADER_DESCRIPTION}" />
+                    </Column>
+                    <Column id="itemDescriptionCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_PRODUCT_DESCRIPTION}" />
+                    </Column>
+                    <Column id="qualifiationDescriptionCol" minScreenWidth="Tablet" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_QUALIFICATION_DESCRIPTION}" />
+                    </Column>
+                    <Column id="serviceTeamCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_SERVICE_TEAM}" />
+                    </Column>
+                    <Column id="firstNameCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_FIRST_NAME}"/>
+                    </Column>
+                    <Column id="lastNameCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_LAST_NAME}"/>
+                    </Column>
+                    <Column id="userNameCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_EMPLOYEEID}" />
+                    </Column>
+                    <Column id="assignStartDateCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_START_DATE}" />
+                    </Column>
+                    <Column id="assignStartTimeCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_START_TIME}" />
+                    </Column>
+                    <Column id="assignEndDateCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_END_DATE}" />
+                    </Column>
+                    <Column id="assignEndTimeCol" demandPopin="true" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGNMENT_END_TIME}" />
+                    </Column>
+                    <Column id="assignCountry" demandPopin="true" visible="false" width="auto">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_COUNTRY}" />
+                    </Column>
+                    <Column id="assignResCol" demandPopin="true" minScreenWidth="small" visible="false" width="8%">
+                        <Text text="{i18n>VIEW_WORKLIST_TABLE_COLUMN_ASSIGN_REMOVE}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectStatus text="{path: 'Rating', formatter:'.formatter.formatRating'}" state="{path: 'Rating', formatter:'.formatter.formatRatingStatus'}" />
+                            <Text text="{path: 'ScopeDate', formatter: '.formatter.date'}" />
+                            <Text text="{CalenderWeek}" />
+                            <Text text="{path: 'StartDate', formatter:'.formatter.date'}" />
+                            <Text text="{path: 'StartDate', formatter:'.formatter.time'}" />
+                            <Text text="{path: 'EndDate', formatter:'.formatter.date'}" />
+                            <Text text="{path: 'EndDate', formatter:'.formatter.time'}" />
+                            <Text text="{path: 'Calloffincl', formatter:'.formatter.toFloat'}" />
+                            <Text text="{path: 'Duration', formatter:'.formatter.toFloat'}" />
+                            <Text text="{Customer}" />
+                            <Text text="{ERPCustomerNo}" />
+                            <Text text="{PremiumEng}" />
+                            <Text text="{DataProtect}" />
+                            <Link text="{path:'DemandID', formatter:'.formatter.toInteger'}" press="onDemandIDLink" />
+                            <Text text="{path:'ItemNo', formatter:'.formatter.toInteger'}" />
+                            <Text text="{HeaderStatusTxt}" />
+                            <Text text="{UserStatusTxt}" />
+                            <Text text="{HeaderDescription}" />
+                            <Text text="{ItemDescription}" />
+                            <Text text="{FirstQualificationDescription}" />
+                            <Text text="{STName}" />
+                            <Text text="{FirstName}" />
+                            <Text text="{LastName}" />
+                            <Text text="{EmpID}" />
+                            <Text text="{path: 'AssignmentStartDate', formatter:'.formatter.date'}" />
+                            <Text text="{path: 'AssignmentStartDate', formatter:'.formatter.time'}" />
+                            <Text text="{path: 'AssignmentEndDate', formatter:'.formatter.date'}" />
+                            <Text text="{path: 'AssignmentEndDate', formatter:'.formatter.time'}" />
+                            <Text text="{Country}" />
+                            <HBox justifyContent="End">
+                                <EmpSingleSelect:EmployeeSearchComponent id="AssignEmployee" visible="{= ${AsgnGUID} === undefined || ${AsgnGUID} === null || ${AsgnGUID} === ''}" />
+                                <core:Icon class="sapUiSmallMarginEnd" tooltip="{i18n>ASSIGNMENT_EDIT_TOOLTIP}" src="sap-icon://edit" visible="{= ${AsgnGUID} !== undefined &amp;&amp; ${AsgnGUID} !== null &amp;&amp; ${AsgnGUID} !== ''}" press="onEditAssignmentDetails" />
+                                <core:Icon tooltip="{i18n>ASSIGNMENT_DELETE_TOOLTIP}" src="sap-icon://sys-cancel" visible="{= ${AsgnGUID} !== undefined &amp;&amp; ${AsgnGUID} !== null &amp;&amp; ${AsgnGUID} !== ''}" press="onDeleteAssignment" />
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button enabled="false" type="Emphasized" class="sapUiMeduimMarginEnd" id="manageLineItemsLink" text="{i18n>VIEW_WORKLIST_TABLE_ASSIGN_RESOURCES}" press="onManageItemsPress" />
+                <Button icon="sap-icon://action" tooltip="{i18n>FRAGMENT_ACTION_SHEET_EXPORT}" press="onActionSheetPress" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
